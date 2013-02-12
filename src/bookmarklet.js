@@ -4,7 +4,7 @@
     var cssNode = document.createElement('link'),
         ts = (new Date()).getTime(),
         styles;
-    cssNode.href = 'https://raw.github.com/weluse/pivoprox/master/css/print.css?' + ts;
+    cssNode.href = 'https://raw.github.com/weluse/pivprint/master/css/print.css?' + ts;
     cssNode.setAttribute('rel', 'stylesheet');
 
     document.body.appendChild(cssNode);
