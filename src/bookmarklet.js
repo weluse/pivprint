@@ -4,7 +4,7 @@
     var cssNode = document.createElement('link'),
         ts = (new Date()).getTime(),
         styles;
-    cssNode.href = 'https://weluse.github.com/pivprint/css/print.css?' + ts;
+    cssNode.href = 'http://weluse.github.com/pivprint/css/print.css?' + ts;
     cssNode.setAttribute('rel', 'stylesheet');
     cssNode.setAttribute('media', 'screen, print');
 
