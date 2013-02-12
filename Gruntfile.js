@@ -21,17 +21,24 @@ module.exports = function (grunt) {
                     sassDir: 'sass/',
                     cssDir: 'css/'
                 }
+            },
+            dev: {
+                options: {
+                    sassDir: 'sass/',
+                    cssDir: 'css/',
+                    debugInfo: true
+                }
             }
         },
         watch: {
             stylesheets: {
-                files: ['**/*.sass'],
-                tasks: ['compass.dist']
+                files: ['sass/*.scss'],
+                tasks: ['compass:dev']
             },
 
             concat: {
                 files: ['src/**/*.js'],
-                tasks: ['concat.pre']
+                tasks: ['concat:pre', 'uglify', 'concat:post']
             }
         },
         uglify: {
