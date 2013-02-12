@@ -19,7 +19,8 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     sassDir: 'sass/',
-                    cssDir: 'css/'
+                    cssDir: 'css/',
+                    outputStyle: 'compressed'
                 }
             },
             dev: {
@@ -55,5 +56,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('default', ['compass', 'concat:pre', 'uglify', 'concat:post']);
+    grunt.registerTask('default', ['compass:dist', 'concat:pre', 'uglify', 'concat:post']);
 };
